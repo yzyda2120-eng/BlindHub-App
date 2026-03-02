@@ -7,7 +7,11 @@ color purple_700
 color teal_200
 color teal_700
 color white
-id textView
+id app_title
+id btn_messages
+id btn_timeline
+id placeholder_text
+id tab_bar
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round

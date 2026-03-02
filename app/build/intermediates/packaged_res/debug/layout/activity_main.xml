@@ -7,30 +7,59 @@
     android:background="#121212"
     tools:context=".MainActivity">
 
-    <!-- واجهة بسيطة للغاية، التركيز بالكامل على الصوت والوصولية -->
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BlindHub"
-        android:textColor="#FFFFFF"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="شعار تطبيق بلايند هاب" />
-
-    <TextView
+        android:id="@+id/app_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="الواجهة الصوتية نشطة"
-        android:textColor="#BBBBBB"
-        android:textSize="18sp"
+        android:text="بلايند هاب - BlindHub"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:contentDescription="عنوان التطبيق: بلايند هاب"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/app_title">
+
+        <Button
+            android:id="@+id/btn_timeline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#1DA1F2"
+            android:text="الخط الزمني"
+            android:contentDescription="زر الخط الزمني، اضغط لسماع المنشورات" />
+
+        <Button
+            android:id="@+id/btn_messages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#25D366"
+            android:text="الرسائل"
+            android:contentDescription="زر الرسائل، اضغط لفتح المحادثات الخاصة" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/placeholder_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="أهلاً بك! المس الشاشة للتنقل بين التغريدات والرسائل."
+        android:textColor="#BBBBBB"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_bar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

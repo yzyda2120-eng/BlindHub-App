@@ -3134,6 +3134,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id app_title
 id arc
 id asConfigured
 id async
@@ -3152,6 +3153,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_messages
+id btn_timeline
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3407,6 +3410,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id placeholder_text
 id position
 id postLayout
 id pressed
@@ -3485,6 +3489,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tab_bar
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3505,7 +3510,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
