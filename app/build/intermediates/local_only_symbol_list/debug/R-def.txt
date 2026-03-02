@@ -15,8 +15,9 @@ id btn_quick_start
 id btn_save_settings
 id btn_search
 id btn_settings
+id content_frame
 id et_phone_or_name
-id fab_legendary_audio
+id fab_create
 id login_header
 id logo
 id nav_snap
@@ -25,10 +26,11 @@ id nav_twitter
 id nav_whatsapp
 id privacy_section
 id profile_visibility_spinner
-id recycler_view_legendary
 id settings_title
 id switch_chat_lock
 id toolbar
+id tv_section_content
+id tv_title
 layout activity_login
 layout activity_main
 layout activity_settings

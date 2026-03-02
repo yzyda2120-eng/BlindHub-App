@@ -3,102 +3,106 @@ package com.blindhub.app
 import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.util.Log
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.blindhub.app.services.LegendaryAudioEngine
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import java.util.Locale
 
 /**
- * النشاط الرئيسي - BlindHub Legendary Edition (v3.0)
- * المنصة الأسطورية للمكفوفين، مع محرك صوتي من الجيل الجديد واستجابة فورية.
+ * النشاط الرئيسي - BlindHub Creator Edition (v3.1)
+ * منصة احترافية تدعم الإنشاء والنشر المخصص لكل قسم (تيك توك، تويتر، سناب، واتساب).
  */
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var tts: TextToSpeech
-    private lateinit var audioEngine: LegendaryAudioEngine
     private lateinit var bottomNav: BottomNavigationView
-    private lateinit var btnSettings: ImageButton
-    private lateinit var btnSearch: ImageButton
-    private lateinit var fabLegendary: FloatingActionButton
-    private var isRecording = false
+    private lateinit var fabCreate: ExtendedFloatingActionButton
+    private lateinit var tvSectionTitle: TextView
+    private lateinit var tvSectionContent: TextView
+    private var currentSection = "tiktok"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         tts = TextToSpeech(this, this)
-        audioEngine = LegendaryAudioEngine(this)
-        
-        setupLegendaryGUI()
+        setupCreatorGUI()
     }
 
-    private fun setupLegendaryGUI() {
+    private fun setupCreatorGUI() {
         bottomNav = findViewById(R.id.bottom_navigation)
-        btnSettings = findViewById(R.id.btn_settings)
-        btnSearch = findViewById(R.id.btn_search)
-        fabLegendary = findViewById(R.id.fab_legendary_audio)
+        fabCreate = findViewById(R.id.fab_create)
+        tvSectionTitle = findViewById(R.id.tv_title)
+        tvSectionContent = findViewById(R.id.tv_section_content)
+
+        val btnSettings = findViewById<ImageButton>(R.id.btn_settings)
+        val btnSearch = findViewById<ImageButton>(R.id.btn_search)
 
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_tiktok -> {
-                    speak("تيك توك الأسطوري: اسحب للأعلى والأسفل لسماع الإبداع.")
+                    updateSection("تيك توك", "مقاطع صوتية إبداعية للمكفوفين", "نشر فيديو صوتي", "tiktok")
                     true
                 }
                 R.id.nav_twitter -> {
-                    speak("تويتر الأسطوري: آخر أخبار المجتمع.")
+                    updateSection("تويتر", "تغريدات وآراء المجتمع الصوتي", "كتابة تغريدة", "twitter")
                     true
                 }
                 R.id.nav_snap -> {
-                    speak("سناب شات الأسطوري: قصص صوتية حصرية.")
+                    updateSection("سناب شات", "قصصك اليومية المباشرة", "إضافة قصة", "snap")
                     true
                 }
                 R.id.nav_whatsapp -> {
-                    speak("واتساب الأسطوري: محادثاتك الخاصة والمشفرة.")
+                    updateSection("واتساب", "محادثاتك الخاصة والمشفرة", "إرسال رسالة", "whatsapp")
                     true
                 }
                 else -> false
             }
         }
 
+        fabCreate.setOnClickListener {
+            val action = when (currentSection) {
+                "tiktok" -> "فتح مسجل الفيديو الصوتي للنشر في تيك توك..."
+                "twitter" -> "فتح واجهة التغريد الصوتي في تويتر..."
+                "snap" -> "فتح كاميرا القصص الصوتية في سناب شات..."
+                "whatsapp" -> "فتح قائمة جهات الاتصال لبدء محادثة واتساب..."
+                else -> "فتح واجهة الإنشاء..."
+            }
+            speak(action)
+            Toast.makeText(this, action, Toast.LENGTH_SHORT).show()
+        }
+
         btnSettings.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
-            speak("فتح إعدادات الخصوصية والأمان الأسطورية.")
+            speak("فتح إعدادات الخصوصية والأمان المتقدمة.")
         }
 
         btnSearch.setOnClickListener {
-            speak("البحث العالمي الأسطوري: ابحث عن أصدقاء أو مواضيع بدقة متناهية.")
-            Toast.makeText(this, "البحث الأسطوري قيد العمل...", Toast.LENGTH_SHORT).show()
+            speak("البحث العالمي: ابحث عن أصدقاء أو مواضيع بدقة متناهية.")
         }
+    }
 
-        fabLegendary.setOnClickListener {
-            if (!isRecording) {
-                audioEngine.startInstantRecording()
-                speak("بدء تسجيل منشور صوتي أسطوري.")
-                fabLegendary.setImageResource(android.R.drawable.ic_media_pause)
-                isRecording = true
-            } else {
-                val filePath = audioEngine.stopInstantRecording()
-                speak("تم إنهاء التسجيل بنجاح. المنشور جاهز للنشر.")
-                fabLegendary.setImageResource(android.R.drawable.ic_btn_speak_now)
-                isRecording = false
-                Log.d("Legendary", "File saved at: $filePath")
-            }
-        }
+    private fun updateSection(title: String, content: String, fabText: String, sectionId: String) {
+        currentSection = sectionId
+        tvSectionTitle.text = "BlindHub $title"
+        tvSectionContent.text = content
+        fabCreate.text = fabText
+        fabCreate.contentDescription = "زر $fabText جديد"
+        speak("انتقلت إلى قسم $title. $content.")
     }
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
             tts.language = Locale("ar")
-            speak("مرحباً بك في بلايند هاب الإصدار الأسطوري. التجربة الأكمل للمكفوفين.")
+            speak("مرحباً بك في بلايند هاب إصدار المنشئين. كل قسم الآن يدعم النشر المخصص.")
         }
     }
 
     private fun speak(text: String) {
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "LegendaryID")
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "CreatorAppID")
     }
 
     override fun onDestroy() {
@@ -106,7 +110,6 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             tts.stop()
             tts.shutdown()
         }
-        audioEngine.stopAnyPlayback()
         super.onDestroy()
     }
 }

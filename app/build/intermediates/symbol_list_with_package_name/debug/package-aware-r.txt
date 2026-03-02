@@ -3190,6 +3190,7 @@ id constraint
 id container
 id content
 id contentPanel
+id content_frame
 id contiguous
 id continuousVelocity
 id coordinator
@@ -3246,7 +3247,7 @@ id et_phone_or_name
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab_legendary_audio
+id fab_create
 id fade
 id fill
 id fill_horizontal
@@ -3433,7 +3434,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recycler_view_legendary
 id report_drawn
 id reverseSawtooth
 id right
@@ -3552,6 +3552,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_section_content
+id tv_title
 id unchecked
 id uniform
 id unlabeled
