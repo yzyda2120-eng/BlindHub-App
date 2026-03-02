@@ -39,7 +39,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     
     // Voice & Accessibility
-    implementation 'com.google.android.gms:play-services-speech:20.1.0'
+    implementation 'com.google.android.gms:play-services-speech:20.0.0'
     
     // Networking
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -52,7 +52,7 @@ dependencies {
     implementation 'com.google.mlkit:object-detection:17.0.0'
     
     // GPS & Maps
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
