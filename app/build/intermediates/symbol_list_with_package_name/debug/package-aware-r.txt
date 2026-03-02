@@ -3246,7 +3246,7 @@ id et_phone_or_name
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab_new
+id fab_legendary_audio
 id fade
 id fill
 id fill_horizontal
@@ -3433,6 +3433,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycler_view_legendary
 id report_drawn
 id reverseSawtooth
 id right
@@ -3558,7 +3559,6 @@ id up
 id useLogo
 id vertical_only
 id view_offset_helper
-id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
