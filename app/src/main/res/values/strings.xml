@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BlindHub</string>
+    <string name="welcome_message">أهلاً بك في بلايند هاب، مجتمعك الصوتي الخاص. قل مساعدة لمعرفة الخيارات.</string>
+    <string name="auth_prompt">يرجى تسجيل عبارة صوتية للتحقق من هويتك.</string>
+    <string name="auth_success">تم التحقق بنجاح. أهلاً بك.</string>
+    <string name="auth_fail">فشل التحقق. يرجى المحاولة مرة أخرى أو التواصل مع الدعم.</string>
+    <string name="sos_activated">تم تفعيل نداء الاستغاثة. جاري الاتصال بالطوارئ وإرسال موقعك للمجتمع.</string>
+    <string name="menu_forums">المنتديات الصوتية</string>
+    <string name="menu_object_desc">وصف الكائنات</string>
+    <string name="menu_navigation">الملاحة</string>
+    <string name="menu_education">المركز التعليمي</string>
+    <string name="menu_career">لوحة الوظائف</string>
+    <string name="menu_mentoring">شبكة الإرشاد</string>
+    <string name="menu_chat">الدردشة الصوتية</string>
+    <string name="menu_braille">قارئ برايل</string>
+    <string name="menu_sos">نداء الاستغاثة</string>
+    <string name="menu_control">التحكم الصوتي</string>
+</resources>
