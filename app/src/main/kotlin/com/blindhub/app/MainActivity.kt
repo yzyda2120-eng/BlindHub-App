@@ -1,58 +1,67 @@
 package com.blindhub.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.widget.FrameLayout
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.Locale
 
 /**
- * النشاط الرئيسي - BlindHub Super App (TikTok + Twitter + Snap + WhatsApp)
- * منصة شاملة للمكفوفين تعتمد على اللمس وقارئات الشاشة.
+ * النشاط الرئيسي - BlindHub Super App (Privacy & Security Edition)
+ * منصة شاملة للمكفوفين تشمل إعدادات خصوصية وقفل دردشة.
  */
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private lateinit var tts: TextToSpeech
     private lateinit var bottomNav: BottomNavigationView
+    private lateinit var btnSettings: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         tts = TextToSpeech(this, this)
-        setupBottomNavigation()
+        setupGUI()
     }
 
-    private fun setupBottomNavigation() {
+    private fun setupGUI() {
         bottomNav = findViewById(R.id.bottom_navigation)
+        btnSettings = findViewById(R.id.btn_settings)
+
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_tiktok -> {
-                    speak("أنت الآن في مقاطع تيك توك الصوتية. اسحب للأعلى لسماع المقطع التالي.")
+                    speak("أنت الآن في مقاطع تيك توك الصوتية.")
                     true
                 }
                 R.id.nav_twitter -> {
-                    speak("أنت الآن في تغريدات تويتر. اسحب لسماع آراء المجتمع.")
+                    speak("أنت الآن في تغريدات تويتر.")
                     true
                 }
                 R.id.nav_snap -> {
-                    speak("أنت الآن في قصص سناب شات. هذه القصص ستختفي بعد يوم واحد.")
+                    speak("أنت الآن في قصص سناب شات.")
                     true
                 }
                 R.id.nav_whatsapp -> {
-                    speak("أنت الآن في رسائل واتساب الخاصة. تواصل مباشرة مع أصدقائك.")
+                    speak("أنت الآن في رسائل واتساب الخاصة.")
                     true
                 }
                 else -> false
             }
+        }
+
+        btnSettings.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+            speak("فتح إعدادات الخصوصية والأمان.")
         }
     }
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
             tts.language = Locale("ar")
-            speak("أهلاً بك في منصة بلايند هاب الشاملة. المس أسفل الشاشة للتنقل بين تيك توك، تويتر، سناب، وواتساب.")
+            speak("أهلاً بك في منصة بلايند هاب الشاملة. المس أسفل الشاشة للتنقل، أو المس أعلى اليمين للإعدادات والخصوصية.")
         }
     }
 

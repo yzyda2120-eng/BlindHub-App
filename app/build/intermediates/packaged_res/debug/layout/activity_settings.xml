@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="إعدادات الخصوصية والأمان"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:contentDescription="عنوان الشاشة: إعدادات الخصوصية والأمان لبلايند هاب"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Privacy Section -->
+    <LinearLayout
+        android:id="@+id/privacy_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/settings_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="من يمكنه رؤية ملفي الشخصي؟"
+            android:textColor="#BBBBBB"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/profile_visibility_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="خيار رؤية الملف الشخصي: الجميع، الأصدقاء فقط، أو لا أحد" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#333333" />
+
+        <!-- Chat Lock Switch -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قفل الدردشة (Chat Lock)"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:contentDescription="خيار قفل الدردشة لحماية محادثاتك الخاصة" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_chat_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="مفتاح تفعيل أو تعطيل قفل الدردشة" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="عند التفعيل، سيطلب التطبيق بصمة أو كلمة مرور لفتح المحادثات."
+            android:textColor="#888888"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save_settings"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="حفظ الإعدادات"
+        android:backgroundTint="#25D366"
+        android:contentDescription="زر حفظ التغييرات في الإعدادات"
+        app:layout_constraintTop_toBottomOf="@id/privacy_section" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

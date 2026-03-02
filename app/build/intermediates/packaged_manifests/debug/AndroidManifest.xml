@@ -36,7 +36,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlindHub" >
         <activity
-            android:name="com.blindhub.app.MainActivity"
+            android:name="com.blindhub.app.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -45,6 +45,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.blindhub.app.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.blindhub.app.SettingsActivity"
+            android:exported="false"
+            android:label="إعدادات الخصوصية والأمان"
+            android:screenOrientation="portrait" />
 
         <!-- Background Service for Voice Control -->
         <service

@@ -3134,6 +3134,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id app_title
 id arc
 id asConfigured
 id async
@@ -3155,6 +3156,8 @@ id bounceEnd
 id bounceStart
 id btn_login
 id btn_quick_start
+id btn_save_settings
+id btn_settings
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3267,6 +3270,7 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id header
 id header_title
 id hide_ime_id
 id hide_in_inspector_tag
@@ -3421,6 +3425,8 @@ id pin
 id position
 id postLayout
 id pressed
+id privacy_section
+id profile_visibility_spinner
 id progress_circular
 id progress_horizontal
 id radio
@@ -3457,6 +3463,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id settings_title
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3495,6 +3502,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id switch_chat_lock
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3681,6 +3689,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

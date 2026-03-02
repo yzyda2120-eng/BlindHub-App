@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:2:1-54:12
 MERGED from [com.google.android.material:material:1.10.0] /home/ubuntu/.gradle/caches/transforms-3/cbd4d3a606b02151825c5abd10f77f82/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/ubuntu/.gradle/caches/transforms-3/a807594b0087b1737e8f94a36ab77fab/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/ubuntu/.gradle/caches/transforms-3/0d240bdd962c45aa6ed213cab303eef2/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -105,8 +105,8 @@ ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:14:5-68
 	android:name
 		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:14:22-65
 application
-ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:16:5-41:19
-INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:16:5-41:19
+ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:16:5-52:19
+INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:16:5-52:19
 MERGED from [com.google.android.material:material:1.10.0] /home/ubuntu/.gradle/caches/transforms-3/cbd4d3a606b02151825c5abd10f77f82/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] /home/ubuntu/.gradle/caches/transforms-3/cbd4d3a606b02151825c5abd10f77f82/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/ubuntu/.gradle/caches/transforms-3/a807594b0087b1737e8f94a36ab77fab/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -139,14 +139,14 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ubuntu/.gradle/caches
 		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:17:9-35
 	android:theme
 		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:22:9-46
-activity#com.blindhub.app.MainActivity
+activity#com.blindhub.app.LoginActivity
 ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:24:9-32:20
 	android:screenOrientation
 		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:27:13-49
 	android:exported
 		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:25:13-41
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:25:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
@@ -157,16 +157,34 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:30:17-77
 	android:name
 		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:30:27-74
-service#com.blindhub.app.services.VoiceControlService
-ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:35:9-39:58
-	android:enabled
-		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:37:13-35
+activity#com.blindhub.app.MainActivity
+ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:34:9-37:52
+	android:screenOrientation
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:37:13-49
 	android:exported
-		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:38:13-37
-	android:foregroundServiceType
-		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:39:13-55
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:36:13-57
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:35:13-41
+activity#com.blindhub.app.SettingsActivity
+ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:39:9-43:52
+	android:screenOrientation
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:43:13-49
+	android:label
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:42:13-53
+	android:exported
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:40:13-45
+service#com.blindhub.app.services.VoiceControlService
+ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:46:9-50:58
+	android:enabled
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:48:13-35
+	android:exported
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:49:13-37
+	android:foregroundServiceType
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:50:13-55
+	android:name
+		ADDED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml:47:13-57
 uses-sdk
 INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/ubuntu/BlindHub/app/src/main/AndroidManifest.xml

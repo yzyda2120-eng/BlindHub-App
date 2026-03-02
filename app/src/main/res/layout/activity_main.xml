@@ -5,6 +5,37 @@
     android:layout_height="match_parent"
     android:background="#121212">
 
+    <!-- Header: Title & Settings Button -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#1E1E1E"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="بلايند هاب - BlindHub"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:contentDescription="عنوان التطبيق: بلايند هاب" />
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="زر الإعدادات والخصوصية"
+            android:src="@android:drawable/ic_menu_preferences"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
     <!-- Content Area for Different Sections -->
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -12,7 +43,7 @@
         android:layout_height="0dp"
         android:contentDescription="محتوى المنصة، اسحب للتنقل بين المقاطع أو التغريدات"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/header" />
 
     <!-- Bottom Navigation Bar: TikTok, Twitter, Snap, WhatsApp -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

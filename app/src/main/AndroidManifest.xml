@@ -22,7 +22,7 @@
         android:theme="@style/Theme.BlindHub">
         
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -30,6 +30,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="إعدادات الخصوصية والأمان"
+            android:screenOrientation="portrait" />
 
         <!-- Background Service for Voice Control -->
         <service
