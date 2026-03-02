@@ -2040,6 +2040,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color nav_item_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color primary_dark_material_dark
@@ -3134,7 +3135,6 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
-id app_title
 id arc
 id asConfigured
 id async
@@ -3157,6 +3157,7 @@ id bounceStart
 id btn_login
 id btn_quick_start
 id btn_save_settings
+id btn_search
 id btn_settings
 id buttonPanel
 id cache_measures
@@ -3244,6 +3245,7 @@ id et_phone_or_name
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_new
 id fade
 id fill
 id fill_horizontal
@@ -3258,7 +3260,6 @@ id fixed
 id flip
 id floating
 id forever
-id fragment_container
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3270,7 +3271,6 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
-id header
 id header_title
 id hide_ime_id
 id hide_in_inspector_tag
@@ -3538,6 +3538,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3556,6 +3557,7 @@ id up
 id useLogo
 id vertical_only
 id view_offset_helper
+id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
