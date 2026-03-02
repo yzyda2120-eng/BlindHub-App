@@ -3154,7 +3154,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_login
-id btn_quick_signup
+id btn_quick_start
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3237,8 +3237,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
-id et_password
-id et_username
+id et_phone_or_name
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3303,7 +3302,8 @@ id line3
 id linear
 id listMode
 id list_item
-id login_title
+id login_header
+id logo
 id m3_side_sheet
 id marquee
 id masked
@@ -3541,7 +3541,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_or
 id unchecked
 id uniform
 id unlabeled
