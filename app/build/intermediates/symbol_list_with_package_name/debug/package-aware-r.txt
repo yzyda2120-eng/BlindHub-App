@@ -3134,7 +3134,6 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
-id app_title
 id arc
 id asConfigured
 id async
@@ -3149,12 +3148,13 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btn_messages
-id btn_timeline
+id btn_login
+id btn_quick_signup
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3237,6 +3237,8 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id et_password
+id et_username
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3254,6 +3256,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3300,6 +3303,7 @@ id line3
 id linear
 id listMode
 id list_item
+id login_title
 id m3_side_sheet
 id marquee
 id masked
@@ -3360,6 +3364,10 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_snap
+id nav_tiktok
+id nav_twitter
+id nav_whatsapp
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3410,7 +3418,6 @@ id pathRelative
 id peekHeight
 id percent
 id pin
-id placeholder_text
 id position
 id postLayout
 id pressed
@@ -3489,7 +3496,6 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
-id tab_bar
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3535,6 +3541,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_or
 id unchecked
 id uniform
 id unlabeled
@@ -3673,6 +3680,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3753,6 +3761,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

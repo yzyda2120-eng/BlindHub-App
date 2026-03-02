@@ -1,65 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
-    tools:context=".MainActivity">
+    android:background="#121212">
 
-    <TextView
-        android:id="@+id/app_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="بلايند هاب - BlindHub"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:contentDescription="عنوان التطبيق: بلايند هاب"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <!-- Content Area for Different Sections -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="محتوى المنصة، اسحب للتنقل بين المقاطع أو التغريدات"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/tab_bar"
+    <!-- Bottom Navigation Bar: TikTok, Twitter, Snap, WhatsApp -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/app_title">
-
-        <Button
-            android:id="@+id/btn_timeline"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#1DA1F2"
-            android:text="الخط الزمني"
-            android:contentDescription="زر الخط الزمني، اضغط لسماع المنشورات" />
-
-        <Button
-            android:id="@+id/btn_messages"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#25D366"
-            android:text="الرسائل"
-            android:contentDescription="زر الرسائل، اضغط لفتح المحادثات الخاصة" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/placeholder_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="أهلاً بك! المس الشاشة للتنقل بين التغريدات والرسائل."
-        android:textColor="#BBBBBB"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:padding="20dp"
+        android:background="#1E1E1E"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_bar" />
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_tiktok"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="مقاطع (تيك توك)"
+        android:contentDescription="تبويب مقاطع تيك توك الصوتية القصيرة" />
+    <item
+        android:id="@+id/nav_twitter"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="تغريدات (تويتر)"
+        android:contentDescription="تبويب تغريدات تويتر الصوتية" />
+    <item
+        android:id="@+id/nav_snap"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="قصص (سناب)"
+        android:contentDescription="تبويب قصص سناب شات الصوتية المؤقتة" />
+    <item
+        android:id="@+id/nav_whatsapp"
+        android:icon="@android:drawable/stat_notify_chat"
+        android:title="رسائل (واتساب)"
+        android:contentDescription="تبويب رسائل واتساب الصوتية الخاصة" />
+</menu>
