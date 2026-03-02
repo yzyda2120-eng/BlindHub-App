@@ -12,8 +12,8 @@ import com.blindhub.app.auth.VoiceAuthManager
 import com.blindhub.app.services.VoiceControlService
 
 /**
- * النشاط الرئيسي لتطبيق BlindHub.
- * يدير الأذونات، يبدأ عملية المصادقة الصوتية، ويشغل خدمة التحكم الصوتي.
+ * النشاط الرئيسي - BlindHub Social Hub (WhatsApp + Twitter Edition)
+ * يركز حصرياً على التواصل الاجتماعي المباشر للمكفوفين.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // واجهة مستخدم فارغة تقريبًا (100% صوتية)
         setContentView(R.layout.activity_main)
 
         if (checkPermissions()) {
@@ -73,7 +72,6 @@ class MainActivity : AppCompatActivity() {
                 startVoiceControlService()
             } else {
                 Log.e("MainActivity", "فشل التحقق. الوصول مرفوض.")
-                // في النسخة الحقيقية، يتم إغلاق التطبيق أو طلب التحقق مرة أخرى
             }
         }
         voiceAuthManager.startAuthentication()
