@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#050505">
 
-    <!-- AppBar - Legendary Creator Design (v3.1) -->
+    <!-- AppBar - Final Polish Design (v3.2) -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,8 +15,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways">
+            android:layout_height="?attr/actionBarSize">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -27,61 +26,92 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="BlindHub Creator"
+                    android:text="BlindHub"
                     android:textColor="#25D366"
                     android:textSize="22sp"
                     android:textStyle="bold"
-                    android:contentDescription="تطبيق بلايند هاب إصدار المنشئين v3.1" />
+                    android:contentDescription="تطبيق بلايند هاب الإصدار النهائي المطور" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
+                <!-- Search Input - Keyboard Focusable -->
+                <EditText
+                    android:id="@+id/et_global_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toEndOf="@id/tv_title"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_centerVertical="true"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/btn_search"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="البحث العالمي المطور"
-                        android:src="@android:drawable/ic_menu_search"
-                        app:tint="#FFFFFF" />
-
-                    <ImageButton
-                        android:id="@+id/btn_settings"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="الإعدادات والخصوصية"
-                        android:src="@android:drawable/ic_menu_preferences"
-                        app:tint="#FFFFFF" />
-                </LinearLayout>
+                    android:background="@drawable/search_bg"
+                    android:hint="ابحث هنا..."
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#888888"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:contentDescription="حقل البحث العالمي، اضغط للكتابة بالكيبورد" />
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Content Area (Sections) -->
-    <FrameLayout
-        android:id="@+id/content_frame"
+    <!-- Main Content Area -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        
-        <!-- Placeholder for dynamic content -->
-        <TextView
-            android:id="@+id/tv_section_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="اسحب أو اختر قسماً من الأسفل"
-            android:textColor="#BBBBBB"
-            android:textSize="18sp"
-            android:contentDescription="منطقة عرض محتوى القسم الحالي" />
-    </FrameLayout>
 
-    <!-- Contextual Action Button (Create/Post) -->
+        <!-- WhatsApp-Style Message Input (Visible only in WhatsApp section) -->
+        <LinearLayout
+            android:id="@+id/layout_message_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="#151515"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/search_bg"
+                android:hint="اكتب رسالة جديدة..."
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:inputType="textMultiLine"
+                android:contentDescription="حقل كتابة رسالة جديدة، اضغط للكتابة" />
+
+            <ImageButton
+                android:id="@+id/btn_send_message"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_send"
+                android:contentDescription="إرسال الرسالة"
+                app:tint="#25D366" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <TextView
+                android:id="@+id/tv_section_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="مرحباً بك في عالم بلايند هاب"
+                android:textColor="#BBBBBB"
+                android:textSize="18sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Contextual Action Button (Instant Post) -->
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab_create"
         android:layout_width="wrap_content"
@@ -89,10 +119,10 @@
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="100dp"
         android:backgroundTint="#25D366"
-        android:text="إنشاء منشور"
+        android:text="نشر فوري"
         android:textColor="#FFFFFF"
-        android:contentDescription="زر إنشاء منشور جديد في القسم الحالي"
-        app:icon="@android:drawable/ic_input_add"
+        android:contentDescription="زر النشر الفوري للوسائط في القسم الحالي"
+        app:icon="@android:drawable/ic_menu_camera"
         app:iconTint="#FFFFFF" />
 
     <!-- Bottom Navigation -->
