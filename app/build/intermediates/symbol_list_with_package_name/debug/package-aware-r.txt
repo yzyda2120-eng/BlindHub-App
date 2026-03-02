@@ -3154,6 +3154,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_google_login
 id btn_login
 id btn_quick_start
 id btn_save_settings
