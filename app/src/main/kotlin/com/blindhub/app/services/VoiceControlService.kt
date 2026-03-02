@@ -105,6 +105,15 @@ class VoiceControlService : Service(), TextToSpeech.OnInitListener {
                 speak("أنت الآن في وضع التحكم الصوتي الكامل. يمكنك التنقل بين الخدمات بقول أسمائها.")
                 // التحكم الصوتي (10. Vocal Interface Control)
             }
+            lowerCommand.contains("ابحث") || lowerCommand.contains("بحث") -> {
+                val query = lowerCommand.replace("ابحث عن", "").replace("بحث", "").trim()
+                if (query.isNotEmpty()) {
+                    speak("جاري البحث عن $query")
+                    // تفعيل ميزة البحث الصوتي (Voice Search)
+                } else {
+                    speak("ماذا تود أن أبحث عنه؟ قل ابحث عن ثم الموضوع.")
+                }
+            }
             else -> {
                 speak("عذراً، لم أفهم الأمر. قل مساعدة لسماع الخيارات المتاحة.")
             }

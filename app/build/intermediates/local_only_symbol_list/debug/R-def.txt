@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+id textView
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string auth_fail
+string auth_prompt
+string auth_success
+string menu_braille
+string menu_career
+string menu_chat
+string menu_control
+string menu_education
+string menu_forums
+string menu_mentoring
+string menu_navigation
+string menu_object_desc
+string menu_sos
+string sos_activated
+string welcome_message
+style Theme.BlindHub
